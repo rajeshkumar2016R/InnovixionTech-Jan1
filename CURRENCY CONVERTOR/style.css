@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0F2027;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+section {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.convertor-container h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.convertor-container .input-container {
+    background-color: white;
+    padding: 5px;
+    border: 2px solid #bbbbbd;
+    margin-block: 20px;
+    border-radius: 5px;
+}
+
+.convertor-container .input-container:focus-within {
+    border-color: blue;
+}
+
+.convertor-container .input-container input,
+.convertor-container .input-container select {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 150px;
+    font-size: 16px;
+}
+
+.arrow {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.result {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 40px;
+    font-weight: 900;
+}
+
+@media(max-width: 378px) {
+    .convertor-container{
+        width: 100%;
+    }
+    .convertor-container h1 {
+        font-size: 25px;
+    }
+
+    .convertor-container .input-container input,
+    .convertor-container .input-container select {
+        width: 100%;
+        font-size: 14px;
+        margin-block: 4px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 5px;
+    }
+}
