@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color-1: #f2f2fc;
+    --bg-color-2: #fdf9ff;
+    --bg-color-3: #e8dfec;
+    --text-color: #000000;
+    --text-color2: #202020;
+    --skin-color: #FF0800;
+}
+
+body{
+    background: var(--text-color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* color: ; */
+}
+.container{
+    width: 340px;
+    background: var(--bg-color-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 1rem;
+    border-radius: 10px;
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 35px;
+}
+.todo{
+    text-align: center;
+    background-color: var(--bg-color-3);
+    border-radius: 20px;
+}
+.todo input{
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 20px;
+}
+.todo button{
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+   cursor: pointer;
+}
+.list-container{
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+ul li{
+    width: 100%;
+    margin-block: 10px;
+    background: var(--bg-color-1);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    list-style: none;
+    transition: .45s ease;
+    padding-right: 40px;
+    position: relative;
+    margin-right: 40px;
+    padding-left: 40px;
+}
+ul li:hover{
+    background-color: var(--bg-color-3);
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    background: url(images/circle-line-icon.png);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-position: center;
+    left: 8px;
+}
+.Checked{
+    text-decoration: line-through;
+}
+.Checked::before{
+    content: '';
+    position: absolute;
+    background: url(images/circle-icon.png);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-position: center;
+    left: 8px;
+}
+span{
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    background: var(--bg-color-2);
+    padding: 0 5px ;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 35px;
+    font-weight: 600;
+    transition: .45s;
+}
+span:hover{
+    background: var(--bg-color-3);
+    color: #FF0800;
+}
+
+@media(max-width: 346px){
+    .container{
+        width: 100%;
+    }
+    .todo input{
+        padding-left: 5px;
+    }
+    .todo button{
+        padding: 10px 20px;
+    }
+    
+}
